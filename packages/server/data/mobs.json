@@ -44,6 +44,52 @@
         }
     },
 
+    "tutorialrat": {
+        "name": "Cave Rat",
+        "description": "A weak rat living in a tutorial cave.",
+        "drops": [
+            {
+                "key": "gold",
+                "chance": 50,
+                "count": 1
+            }
+        ],
+        "dropTables": ["ordinary"],
+        "hitPoints": 10,
+        "level": 1,
+        "aggroRange": 1,
+        "attackRate": 1600,
+        "movementSpeed": 400,
+        "respawnDelay": 5000,
+        "attackStats": {
+            "crush": 1,
+            "slash": 1,
+            "stab": 1,
+            "archery": 0,
+            "magic": 0
+        },
+        "defenseStats": {
+            "crush": -5,
+            "slash": -7,
+            "stab": -6,
+            "archery": 0,
+            "magic": 0
+        },
+        "bonuses": {
+            "accuracy": 0,
+            "strength": 0,
+            "archery": 0,
+            "magic": 0
+        },
+        "skills": {
+            "accuracy": 1,
+            "strength": 1,
+            "defense": 0,
+            "archery": 0,
+            "magic": 0
+        }
+    },
+
     "bat": {
         "name": "Batterfly",
         "description": "A bat that is also a butterfly, what a strange creature.",

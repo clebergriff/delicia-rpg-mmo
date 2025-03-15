@@ -1,5 +1,5 @@
 export default {
-    NAME: 'Kaetram',
+    NAME: 'Delicia RPG MMO',
     DESCRIPTION:
-        "Kaetram is an open-source game-engine created to aid those interested in entering the game development realm. The original idea is based on Little Workshop's demo game - BrowserQuest. The assets have remained the same, but the code itself has been completely wiped and redone from the ground up."
+        'Delicia RPG MMO é um jogo de código aberto criado para ajudar aqueles interessados em entrar no mundo do desenvolvimento de jogos. A ideia original é baseada no jogo demo da Little Workshop - BrowserQuest. Os recursos permaneceram os mesmos, mas o código foi completamente reescrito do zero.'
 } as const;

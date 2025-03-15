@@ -351,7 +351,7 @@
         "name": "Bronze Spear",
         "weaponType": "spear",
         "skill": "accuracy",
-        "level": 5,
+        "level": 0,
         "attackStats": {
             "crush": 2,
             "slash": 2,

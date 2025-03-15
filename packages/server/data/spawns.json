@@ -332,5 +332,21 @@
         "achievement": "roadtohell",
         "hitPoints": 1050,
         "attackRate": 800
+    },
+
+    "48-595": {
+        "name": "tutorialrat",
+        "count": 3,
+        "roamDistance": 3
+    },
+    "52-598": {
+        "name": "tutorialrat",
+        "count": 2,
+        "roamDistance": 3
+    },
+    "45-600": {
+        "name": "tutorialrat",
+        "count": 2,
+        "roamDistance": 3
     }
 }

@@ -349,7 +349,7 @@ let currentLanguage = getLanguage(),
         </span>
     </section>
 
-    <select id="lang-select" oninput={'location = "/" + this.value + "/"'}>
+    <select id="lang-select" oninput="window.changeClientLanguage(this.value)">
         {
             languages.map(({ locale, name }) => (
                 <option value={locale} selected={locale === currentLanguage}>
@@ -402,3 +402,21 @@ let currentLanguage = getLanguage(),
         </div>
     </footer>
 </div>
+
+<script>
+    // Adiciona a função para mudar o idioma no cliente
+    window.changeClientLanguage = function(lang) {
+        // Armazena o idioma selecionado em localStorage
+        localStorage.setItem('kaetram-language', lang);
+        // Recarrega a página para aplicar a mudança
+        window.location.reload();
+    };
+
+    // Verifica se há um idioma salvo e aplica
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedLang = localStorage.getItem('kaetram-language');
+        if (savedLang && document.querySelector('#lang-select').value !== savedLang) {
+            document.querySelector('#lang-select').value = savedLang;
+        }
+    });
+</script>

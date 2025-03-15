@@ -1,0 +1,57 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Kaetram - Server",
+            "skipFiles": ["<node_internals>/**"],
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": ["dev"],
+            "env": {
+                "HUB_ENABLED": "false"
+            },
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Kaetram - Hub",
+            "skipFiles": ["<node_internals>/**"],
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "yarn",
+            "runtimeArgs": ["hub"],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Kaetram - Client (Chrome)",
+            "url": "http://localhost:9000",
+            "webRoot": "${workspaceFolder}/packages/client"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Kaetram - Full Stack",
+            "configurations": ["Kaetram - Server", "Kaetram - Client (Chrome)"],
+            "presentation": {
+                "hidden": false,
+                "group": "Main",
+                "order": 1
+            }
+        },
+        {
+            "name": "Kaetram - Full Stack with Hub",
+            "configurations": ["Kaetram - Hub", "Kaetram - Server", "Kaetram - Client (Chrome)"],
+            "presentation": {
+                "hidden": false,
+                "group": "Main",
+                "order": 2
+            }
+        }
+    ]
+}

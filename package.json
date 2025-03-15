@@ -11,6 +11,11 @@
     "scripts": {
         "postinstall": "husky install",
         "packages": "FORCE_COLOR=true yarn workspaces foreach --no-private -j 4 -piv run",
+        "packages:server": "yarn workspace @kaetram/server",
+        "packages:client": "yarn workspace @kaetram/client",
+        "packages:hub": "yarn workspace @kaetram/hub",
+        "packages:common": "yarn workspace @kaetram/common",
+        "packages:admin": "yarn workspace @kaetram/admin",
         "dev": "yarn packages dev",
         "hub": "yarn packages hub",
         "start": "yarn packages start",
